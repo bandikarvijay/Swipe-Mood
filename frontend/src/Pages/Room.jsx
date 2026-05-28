@@ -20,7 +20,7 @@ import "./Room.css";
 // =========================
 
 const socket = io(
-  "http://localhost:5000"
+  "https://swipemood.onrender.com"
 );
 
 // =========================
@@ -141,7 +141,7 @@ const [isAdmin, setIsAdmin] =
       try {
 
         const res = await fetch(
-          `http://localhost:5000/api/rooms/${roomCode}`
+          `https://swipemood.onrender.com/api/rooms/${roomCode}`
         );
 
         const data =
