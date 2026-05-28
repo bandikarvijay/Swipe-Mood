@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://swipe-mood.vercel.app/sitemap.xml
+

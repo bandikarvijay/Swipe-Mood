@@ -1,0 +1,483 @@
+* {
+
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+body {
+
+  font-family: "Inter", sans-serif;
+
+  background: #020617;
+
+  overflow-x: hidden;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.create-room-container {
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 20px;
+}
+
+/* =========================
+   LIGHT EFFECT
+========================= */
+
+.custom-rays {
+
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  z-index: 0;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.create-room-card {
+
+  width: 100%;
+
+  max-width: 430px;
+
+  padding: 38px 28px;
+
+  border-radius: 28px;
+
+  background: rgba(10, 18, 40, 0.82);
+
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 10px 35px rgba(0,0,0,0.35);
+
+  position: relative;
+
+  z-index: 5;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.title {
+
+  font-size: 34px;
+
+  font-weight: 700;
+
+  color: white;
+
+  text-align: center;
+
+  margin-bottom: 10px;
+
+  line-height: 1.3;
+}
+
+.subtitle {
+
+  font-size: 15px;
+
+  color: #cbd5e1;
+
+  text-align: center;
+
+  margin-bottom: 28px;
+
+  line-height: 1.6;
+}
+
+/* =========================
+   ROOM CODE
+========================= */
+
+.roomcode-boxes {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-bottom: 24px;
+}
+
+.code-box {
+
+  width: 54px;
+
+  height: 62px;
+
+  border-radius: 16px;
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  background: rgba(255,255,255,0.06);
+
+  color: white;
+
+  font-size: 24px;
+
+  font-weight: 700;
+
+  text-align: center;
+
+  outline: none;
+
+  transition: 0.25s;
+}
+
+.code-box:focus {
+
+  border-color: #58a6ff;
+
+  transform: scale(1.05);
+
+  box-shadow:
+    0 0 14px rgba(88,166,255,0.45);
+}
+
+/* =========================
+   INPUT
+========================= */
+
+.input-field {
+
+  width: 100%;
+
+  height: 56px;
+
+  border-radius: 16px;
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  background: rgba(255,255,255,0.06);
+
+  padding: 0 18px;
+
+  color: white;
+
+  font-size: 15px;
+
+  outline: none;
+
+  margin-bottom: 18px;
+
+  transition: 0.25s;
+}
+
+.input-field::placeholder {
+
+  color: #94a3b8;
+}
+
+.input-field:focus {
+
+  border-color: #58a6ff;
+
+  box-shadow:
+    0 0 12px rgba(88,166,255,0.35);
+}
+
+/* =========================
+   ERROR
+========================= */
+
+.error-text {
+
+  color: #ff6b6b;
+
+  font-size: 14px;
+
+  text-align: center;
+
+  margin-bottom: 18px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.button-group {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.join-btn,
+.create-btn {
+
+  width: 100%;
+
+  height: 56px;
+
+  border: none;
+
+  border-radius: 16px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.join-btn {
+
+  background: linear-gradient(
+    135deg,
+    #58a6ff,
+    #2563eb
+  );
+
+  color: white;
+}
+
+.create-btn {
+
+  background: rgba(255,255,255,0.08);
+
+  color: white;
+
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.join-btn:hover,
+.create-btn:hover {
+
+  transform: translateY(-2px);
+}
+
+.join-btn:active,
+.create-btn:active {
+
+  transform: scale(0.97);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media screen and (max-width: 768px) {
+
+  .create-room-card {
+
+    max-width: 380px;
+
+    padding: 32px 22px;
+  }
+
+  .title {
+
+    font-size: 28px;
+  }
+
+  .subtitle {
+
+    font-size: 14px;
+  }
+
+  .code-box {
+
+    width: 48px;
+
+    height: 56px;
+
+    font-size: 20px;
+  }
+
+  .input-field {
+
+    height: 52px;
+
+    font-size: 14px;
+  }
+
+  .join-btn,
+  .create-btn {
+
+    height: 52px;
+
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   SMALL MOBILES
+========================= */
+
+@media screen and (max-width: 480px) {
+
+  .create-room-container {
+
+    padding: 16px;
+  }
+
+  .create-room-card {
+
+    width: 100%;
+
+    max-width: 100%;
+
+    padding: 28px 18px;
+
+    border-radius: 24px;
+  }
+
+  .title {
+
+    font-size: 24px;
+
+    line-height: 1.35;
+  }
+
+  .subtitle {
+
+    font-size: 13px;
+
+    margin-bottom: 22px;
+  }
+
+  .roomcode-boxes {
+
+    gap: 6px;
+  }
+
+  .code-box {
+
+    width: 42px;
+
+    height: 50px;
+
+    font-size: 18px;
+
+    border-radius: 12px;
+  }
+
+  .input-field {
+
+    height: 50px;
+
+    padding: 0 14px;
+
+    font-size: 14px;
+
+    border-radius: 14px;
+  }
+
+  .join-btn,
+  .create-btn {
+
+    height: 50px;
+
+    border-radius: 14px;
+
+    font-size: 14px;
+  }
+
+  .developer-footer {
+
+    font-size: 11px;
+  }
+}
+
+/* =========================
+   VERY SMALL DEVICES
+========================= */
+
+@media screen and (max-width: 360px) {
+
+  .title {
+
+    font-size: 21px;
+  }
+
+  .subtitle {
+
+    font-size: 12px;
+  }
+
+  .code-box {
+
+    width: 38px;
+
+    height: 46px;
+
+    font-size: 16px;
+  }
+
+  .input-field {
+
+    height: 48px;
+  }
+
+  .join-btn,
+  .create-btn {
+
+    height: 48px;
+
+    font-size: 13px;
+  }
+}
+
+
+.developer-footer-inside{
+
+  margin-top:22px;
+
+  padding-top:16px;
+
+  border-top:
+    1px solid rgba(255,255,255,0.08);
+
+  text-align:center;
+
+  font-size:13px;
+
+  color:#cbd5e1;
+}
+
+.developer-footer-inside a{
+
+  color:#58a6ff;
+
+  text-decoration:none;
+
+  font-weight:600;
+}
+
