@@ -103,6 +103,7 @@ const [isAdmin, setIsAdmin] =
 
   const remoteScreenRef =
     useRef(null);
+  const chatAreaRef = useRef(null);
 
   // =========================
   // USER
@@ -318,6 +319,20 @@ socket.on(
   navigate,
   currentUrl,
 ]);
+
+  useEffect(() => {
+
+  if (chatAreaRef.current) {
+
+    chatAreaRef.current.scrollTo({
+      top:
+        chatAreaRef.current.scrollHeight,
+      behavior: "smooth",
+    });
+  }
+
+}, [messages]);
+  
   // =========================
   // PLAY VIDEO
   // =========================
@@ -904,7 +919,10 @@ socket.on(
     💬 Live Chat
   </div>
 
-  <div className="chat-area">
+  <div 
+      className="chat-area"
+      ref={chatAreaRef}
+    >
 
     {messages.map(
       (
