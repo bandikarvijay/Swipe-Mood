@@ -898,7 +898,7 @@ socket.on(
 
   <footer className="developer-footer">
 
-    Developed by
+    Developed by 
 
     <a
       href="https://vijayabhaskar.vercel.app/"
